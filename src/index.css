@@ -1,0 +1,8 @@
+@import "tailwindcss";
+
+::-webkit-scrollbar{
+    visibility: hidden;
+}
+*{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
