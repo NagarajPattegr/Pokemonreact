@@ -2,12 +2,10 @@ import { useEffect, useState } from "react";
 import Loader from "./Components/Loader";
 import Header from "./Components/Header";
 import Cards from "./Components/Cards";
+import {usePokemon } from "./Components/PokemonContext";
 
 function App() {
-  const [pokemon, setPokemon] = useState([]);
-  const [pokemonlist,setList] = useState([])
-  const [isLoading, setLoading] = useState(true);
-  const [search,setSearch] = useState("")
+  const {setPokemon,setList,setLoading,search,pokemon,setSearch,pokemonlist,isLoading} = usePokemon()
 
   async function apiData() {
     try {
@@ -47,6 +45,7 @@ function App() {
   console.log(pokemon);
 
   return (
+   
     <div className="w-screen h-screen flex flex-col items-center bg-slate-950">
       <Header />
         <div className="w-full h-fit flex justify-center mt-5">
@@ -70,5 +69,4 @@ function App() {
     </div>
   );
 }
-
 export default App;

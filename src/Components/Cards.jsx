@@ -6,5 +6,5 @@ export default function Cards({pokemon}){
               return <PokemonCard key={pk.id} data={pk}></PokemonCard>;
             })}
           </ul>
-    )
+    );
 }
